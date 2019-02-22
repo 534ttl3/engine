@@ -1,0 +1,23 @@
+// scene1
+// light types: POINTLIGHT, DIRECTIONALLIGHT, SPOTLIGHT
+
+// index, type, position, intensity, direction, exponent, cutoff
+#L{0;POINTLIGHT;5.0 5.0 5.0;1.0 1.0 1.0;0.0 0.0 0.0;0.0;0.0}
+
+// important note: rotation around axis must always be set, if rot_angle == 0, set rotation axis to 1.0 0.0 0.0
+// or nothing will be displayed (it is handled, but don't challenge error handling)
+#O{0;assets/objects/sphere/sphere.obj.mybin;0.0 3.0 -2.0;0.0;1.0 0.0 0.0;1.0 1.0 1.0;0}
+#O{1;assets/objects/dragon/dragon.obj.mybin;0.0 0.0 0.0;0.0;1.0 0.0 0.0;1.0 1.0 1.0;0}
+#O{2;assets/objects/wall/wall.obj.mybin;0.0 0.0 0.0;0.0;1.0 0.0 0.0;1.0 1.0 1.0;0}
+
+// this is parsed by a minimalistic expression parser, so follow the syntax rules strictly!
+// one instruction in one line!
+// Syntax rules (boost regex):
+// SHADER_TYPE: (#SHADER_TYPE)[{]([A-Z_]*)[;]([A-Za-z_:./ ]*)[;]([A-Za-z_:./ ]*)[}]
+// O: (#O)[{]([0-9]{1,5})[;]([A-Za-z_:./ ]*)[;]([A-Z_]*)[;]
+//([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[;]
+//([0-9]{1,5}[.][0-9]{1,5})[;]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[;]
+//([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[}]
+// always start a comment (//) at position 0 of a new line, as I did here, else it might crash
+// also never write an instruction command (#...) in some other line than comment or 
+// instruction, errors will occur

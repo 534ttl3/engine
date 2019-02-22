@@ -1,0 +1,8 @@
+* 3D rendering with OpenGL
+This is an attempt of building a rendering engine in OpenGL, which I wrote back in 2013 when I was 18 and not experienced. 
+
+Now that I know git, I'm putting this on Github, but the project hasn't been successfully compiled in a few years. 
+
+It loads in and displays various models, trying out different GLSL shaders. 
+To view it from any angle and any orientation, I implemented a flying camera. 
+

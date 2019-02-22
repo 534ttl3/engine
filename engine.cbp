@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="engine" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/engine" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="/usr/include/GL" />
+			<Add directory="/usr/include/SDL2" />
+			<Add directory="/usr/include/boost" />
+			<Add directory="/usr/include/glm" />
+		</Compiler>
+		<Linker>
+			<Add option="-lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf" />
+			<Add option="-lGLEW" />
+			<Add option="-lGL" />
+			<Add option="-lboost_regex" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="include/CObjectImp.cpp" />
+		<Unit filename="include/CObjectImp.h" />
+		<Unit filename="include/CSceneImp.cpp" />
+		<Unit filename="include/CSceneImp.h" />
+		<Unit filename="include/GraphicsApplication.cpp" />
+		<Unit filename="include/GraphicsApplication.h" />
+		<Unit filename="include/SceneHandler.cpp" />
+		<Unit filename="include/SceneHandler.h" />
+		<Unit filename="include/ScenePropertiesData.h" />
+		<Unit filename="include/Tools.cpp" />
+		<Unit filename="include/Tools.h" />
+		<Unit filename="include/camera/camerahandling.cpp" />
+		<Unit filename="include/camera/camerahandling.h" />
+		<Unit filename="include/datastructures.cpp" />
+		<Unit filename="include/datastructures.h" />
+		<Unit filename="include/input/InputHandler.cpp" />
+		<Unit filename="include/input/InputHandler.h" />
+		<Unit filename="include/opengl/OGLBR_GUIBlock.cpp" />
+		<Unit filename="include/opengl/OGLBR_GUIBlock.h" />
+		<Unit filename="include/opengl/OGLBR_GUIElem.cpp" />
+		<Unit filename="include/opengl/OGLBR_GUIElem.h" />
+		<Unit filename="include/opengl/OGLBR_Geom.cpp" />
+		<Unit filename="include/opengl/OGLBR_Geom.h" />
+		<Unit filename="include/opengl/OGLContextHandler.cpp" />
+		<Unit filename="include/opengl/OGLContextHandler.h" />
+		<Unit filename="include/opengl/OpenGLBufferRenderTextGUIBlock.h" />
+		<Unit filename="include/opengl/shaderhandling.cpp" />
+		<Unit filename="include/opengl/shaderhandling.h" />
+		<Unit filename="include/opengl/shaderlist.h" />
+		<Unit filename="include/processing/processing.cpp" />
+		<Unit filename="include/processing/processing.h" />
+		<Unit filename="include/scenegraph/CSceneNode.cpp" />
+		<Unit filename="include/scenegraph/CSceneNode.h" />
+		<Unit filename="include/scenegraph/GUIBlockNode.cpp" />
+		<Unit filename="include/scenegraph/GUIBlockNode.h" />
+		<Unit filename="include/scenegraph/GUIElementNode.cpp" />
+		<Unit filename="include/scenegraph/GUIElementNode.h" />
+		<Unit filename="include/scenegraph/GeomNode.cpp" />
+		<Unit filename="include/scenegraph/GeomNode.h" />
+		<Unit filename="include/scenegraph/Matrixstack.cpp" />
+		<Unit filename="include/scenegraph/Matrixstack.h" />
+		<Unit filename="include/scenegraph/ObjectNode.cpp" />
+		<Unit filename="include/scenegraph/ObjectNode.h" />
+		<Unit filename="include/scenegraph/SceneGraph.cpp" />
+		<Unit filename="include/scenegraph/SceneGraph.h" />
+		<Unit filename="include/scenegraph/SceneNode.cpp" />
+		<Unit filename="include/scenegraph/SceneNode.h" />
+		<Unit filename="include/scenegraph/TransformNode.cpp" />
+		<Unit filename="include/scenegraph/TransformNode.h" />
+		<Unit filename="include/window/WindowHandler.cpp" />
+		<Unit filename="include/window/WindowHandler.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
