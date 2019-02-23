@@ -26,7 +26,7 @@ public:
     }
 private:
     bool ParseComplexSceneFile(const std::string& filepath);
-    bool ParseSceneLight(std::string& line);
-    bool ParseSceneObject(std::string& line);
+    bool ParseSceneLight(std::string line);
+    bool ParseSceneObject(std::string line);
 };
 #endif // CSceneImp_H

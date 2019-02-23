@@ -161,7 +161,7 @@ bool CSceneImp::ParseComplexSceneFile(const string& filepath)
     return true;
 }
 
-bool CSceneImp::ParseSceneObject(string& line)
+bool CSceneImp::ParseSceneObject(string line)
 {
     boost::regex e( "(#O)[{]([0-9]{1,5})[;]([A-Za-z_:./ ]*)[;]"
                     "([0-9-]{1,5}[.][0-9-]{1,5})[ ]([0-9-]{1,5}[.][0-9-]{1,5})[ ]([0-9-]{1,5}[.][0-9-]{1,5})[;]"   // translate
@@ -169,8 +169,10 @@ bool CSceneImp::ParseSceneObject(string& line)
                     "([0-9-]{1,5}[.][0-9-]{1,5})[ ]([0-9-]{1,5}[.][0-9-]{1,5})[ ]([0-9-]{1,5}[.][0-9-]{1,5})[;]" // scale
                     "([0-9 ]*)[}]"); // lights affecting object
 
+    string line_fromfile = line;
+
     boost::match_results<string::const_iterator> results;
-    if(boost::regex_match(line, results, e))
+    if(boost::regex_match(line_fromfile, results, e))
     {
         ObjectProperties objp;
         // index
@@ -233,7 +235,7 @@ bool CSceneImp::ParseSceneObject(string& line)
 }
 
 
-bool CSceneImp::ParseSceneLight(string& line)
+bool CSceneImp::ParseSceneLight(string line)
 {
     cout << "Parsing SceneLight" << endl;
 
@@ -246,8 +248,13 @@ bool CSceneImp::ParseSceneLight(string& line)
                    "([0-9]{1,5}[.][0-9]{1,5})[}]"                                                          // cutoff
                   );
 
+    string line_fromfile = line;
+
+    cout << line_fromfile << endl;
+    cout << line << endl;
+
     boost::match_results<string::const_iterator> results;
-    if(!boost::regex_match(line, results, e))
+    if(!boost::regex_match(line_fromfile, results, e))
     {
         cout << "regex failed" << endl;
         return false;

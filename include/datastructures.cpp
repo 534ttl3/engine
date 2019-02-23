@@ -81,7 +81,7 @@ void CalcBoundingSphere(BoundingSphere& sphere, std::vector<VertexData>& vertice
 
     sphere.radius = 0;
 
-    for(int i=0; i<vertices.size(); i++)
+    for(unsigned int i=0; i<vertices.size(); i++)
     {
         dx = vertices[i].position.x - sphere.center.x;
         dy = vertices[i].position.y - sphere.center.y;

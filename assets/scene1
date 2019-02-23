@@ -19,5 +19,5 @@
 //([0-9]{1,5}[.][0-9]{1,5})[;]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[;]
 //([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[ ]([0-9]{1,5}[.][0-9]{1,5})[}]
 // always start a comment (//) at position 0 of a new line, as I did here, else it might crash
-// also never write an instruction command (#...) in some other line than comment or 
+// also never write an instruction command (#...) in some other line than comment or
 // instruction, errors will occur
