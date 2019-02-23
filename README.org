@@ -6,3 +6,5 @@ Now that I know git, I'm putting this on Github, but the project hasn't been suc
 It loads in and displays various models, trying out different GLSL shaders. 
 To view it from any angle and any orientation, I implemented a flying camera. 
 
+Demo image: 
+[[file:./screenshots/stanford_dragon.png]]
